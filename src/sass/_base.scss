@@ -1,0 +1,26 @@
+// FONT VARIABLES
+$font-primary: 'Lemonada', sans-serif;
+$font-regular: 'Roboto', sans-serif;
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: $font-regular;
+    font-weight: 300;
+    line-height: 1.6;
+
+    //background-color: #0a0708;
+    background-color: #000;
+    color: #ebe1b0;
+}

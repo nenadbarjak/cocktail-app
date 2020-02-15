@@ -1,0 +1,12 @@
+.search {
+    //background-color: #1a1a1a;
+
+    grid-column: 7 / -1;
+
+
+    &__select {
+        width: 40%;
+        //color: black;
+        font-size: 1.6rem;
+    }
+}

@@ -1,0 +1,39 @@
+.cocktail {
+    //background-color: palegreen;
+    //background-image: linear-gradient(to right bottom, #73260a, #c25000);
+
+    grid-column: 1 / span 6;
+    padding: 3rem;
+
+    display: grid;
+    grid-template-rows: repeat(3, max-content);
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem;
+    justify-items: center;
+
+    &__title {
+        grid-column: 1 / 2;
+        margin-bottom: 1rem;
+        background-image: linear-gradient(to right, #c25000, #73260a);
+        background-clip: text;
+        color: transparent;
+    }
+
+    &__img {
+        width: 32rem;
+        border-radius: 4px;
+    }
+
+    &__instructions {
+        font-size: 1.4rem;
+    }
+
+    &__ingredients {
+        grid-row: 1 / -1;
+        grid-column: 2 / -1;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
+    }
+}
