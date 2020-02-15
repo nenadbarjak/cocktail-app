@@ -1,7 +1,4 @@
 .cocktail {
-    //background-color: palegreen;
-    //background-image: linear-gradient(to right bottom, #73260a, #c25000);
-
     grid-column: 1 / span 6;
     padding: 3rem;
 
@@ -14,7 +11,7 @@
     &__title {
         grid-column: 1 / 2;
         margin-bottom: 1rem;
-        background-image: linear-gradient(to right, #c25000, #73260a);
+        background-image: linear-gradient(to right bottom, $cream, $tiger-lily, $maroon);
         background-clip: text;
         color: transparent;
     }

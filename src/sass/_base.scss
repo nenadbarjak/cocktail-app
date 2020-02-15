@@ -2,6 +2,12 @@
 $font-primary: 'Lemonada', sans-serif;
 $font-regular: 'Roboto', sans-serif;
 
+// COLOR VARIABLES
+$cream: #ebe1b0;
+$ebony: #0a0708;
+$maroon: #73260a;
+$tiger-lily: #c25000;
+
 *,
 *::before,
 *::after {
@@ -22,5 +28,5 @@ body {
 
     //background-color: #0a0708;
     background-color: #000;
-    color: #ebe1b0;
+    color: $cream;
 }

@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import Select from 'react-select';
 import axios from 'axios'
 import { ingredients } from '../ingr'
+import CocktailsList from './CocktailsList';
 
-const Search = () => {
+
+const Search = ({ cocktailsList, dispatchCocktailsList }) => {
     const [imgURL, setImgURL] = useState()
 
     const ingr = ingredients.map(ingredient => ({
@@ -33,7 +35,23 @@ const Search = () => {
             setImgURL(encodedIngr)
             axios.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${encodedIngr}`)
                 .then((res) => {
-                    console.log(res.data.drinks)
+                    const drinks = res.data.drinks
+                    const cocktails = []
+                    
+                    if (drinks && drinks.length > 0) {
+                            drinks.forEach((drink) => {
+                            cocktails.push({
+                                id: drink.idDrink,
+                                name: drink.strDrink,
+                                img: drink.strDrinkThumb
+                            })
+                        })
+                    }
+
+                    dispatchCocktailsList({
+                        type: 'SET_COCKTAILS_LIST',
+                        cocktails
+                    })
                 })
                 .catch((err) => {
                     console.log(err)
@@ -41,23 +59,28 @@ const Search = () => {
         } else {
             setImgURL(null)
 
-            // set selected ingr to null in state
+            dispatchCocktailsList({
+                type: 'CLEAR_COCKTAILS_LIST'
+            })
         }    
     }
 
     return (  
         <div className="search">
-            <Select
-                className="search__select"
-                theme={customTheme}
-                options={ingr}
-                isSearchable
-                isClearable
-                placeholder="Search for an ingredient"
-                onChange={getImg}
-            />
-            {imgURL && <img src={`https://www.thecocktaildb.com/images/ingredients/${imgURL}-Medium.png`} alt="ingredient"/>}               
+            <div className="search__select">
+                <Select                   
+                    theme={customTheme}
+                    options={ingr}
+                    isSearchable
+                    isClearable
+                    placeholder="Search for an ingredient"
+                    onChange={getImg}
+                />
+            </div>
             
+            {imgURL && <img src={`https://www.thecocktaildb.com/images/ingredients/${imgURL}-Medium.png`} alt="ingredient" className="search__img" />}               
+
+            <CocktailsList cocktailsList={cocktailsList} />
         </div>
     );
 }
