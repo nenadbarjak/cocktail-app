@@ -19,6 +19,7 @@
     &__img {
         width: 32rem;
         border-radius: 4px;
+        background-color: grey;
     }
 
     &__instructions {
@@ -32,5 +33,24 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 2rem;
+        justify-items: center;
+    }
+
+    &__clear {
+        font-family: $font-primary;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        color: $color-black;
+        padding: .75rem;
+        background-image: linear-gradient(to right bottom, $cream, $tiger-lily, $maroon);
+        border-radius: 2px;
+        cursor: pointer;
+        opacity: .9;
+        transition: all .3s ease;
+
+        &:hover {
+            opacity: 1;
+            box-shadow: 0 .2rem .5rem rgba($maroon, .6);
+        }
     }
 }

@@ -5,7 +5,7 @@ import { ingredients } from '../ingr'
 import CocktailsList from './CocktailsList';
 
 
-const Search = ({ cocktailsList, dispatchCocktailsList }) => {
+const Search = ({ cocktailsList, dispatchCocktailsList, dispatchSelectedCocktail }) => {
     const [imgURL, setImgURL] = useState()
 
     const ingr = ingredients.map(ingredient => ({
@@ -33,7 +33,7 @@ const Search = ({ cocktailsList, dispatchCocktailsList }) => {
         if (e) {
             const encodedIngr = encodeURI(e.value)
             setImgURL(encodedIngr)
-            axios.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${encodedIngr}`)
+            axios.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${e.value}`)
                 .then((res) => {
                     const drinks = res.data.drinks
                     const cocktails = []
@@ -80,7 +80,7 @@ const Search = ({ cocktailsList, dispatchCocktailsList }) => {
             
             {imgURL && <img src={`https://www.thecocktaildb.com/images/ingredients/${imgURL}-Medium.png`} alt="ingredient" className="search__img" />}               
 
-            <CocktailsList cocktailsList={cocktailsList} />
+            <CocktailsList cocktailsList={cocktailsList} dispatchSelectedCocktail={dispatchSelectedCocktail} />
         </div>
     );
 }

@@ -7,6 +7,7 @@ $cream: #ebe1b0;
 $ebony: #0a0708;
 $maroon: #73260a;
 $tiger-lily: #c25000;
+$color-black: #000;
 
 *,
 *::before,
@@ -27,6 +28,6 @@ body {
     line-height: 1.6;
 
     //background-color: #0a0708;
-    background-color: #000;
+    background-color: $color-black;
     color: $cream;
 }
