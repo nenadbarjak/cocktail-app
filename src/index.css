@@ -24,11 +24,50 @@ body {
   grid-gap: 3rem; }
 
 .header {
-  background-color: #1a1a1a;
-  grid-column: 1 / -1; }
+  background-image: linear-gradient(to right bottom, #c25000, #73260a, #0a0708);
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  .header__heading {
+    text-transform: uppercase;
+    color: #0a0708; }
+  .header__random {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: .15rem;
+    cursor: pointer;
+    color: #c25000;
+    padding: 1rem;
+    border: 1px solid #c25000;
+    border-radius: 3px;
+    background-color: #000;
+    position: relative;
+    overflow: hidden; }
+    .header__random > * {
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      transition: all .4s ease; }
+    .header__random:hover {
+      background-image: linear-gradient(to right bottom, #c25000, #73260a);
+      color: #000;
+      border: 1px solid #73260a; }
+    .header__random--invisible {
+      position: absolute;
+      left: 0;
+      top: -100%;
+      padding: 1rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: .15rem; }
+    .header__random:hover .header__random--visible {
+      transform: translateY(150%); }
+    .header__random:hover .header__random--invisible {
+      top: 0; }
 
 .footer {
-  background-color: #929292;
+  background-color: #0a0708;
   grid-row: 3 / 4;
   grid-column: 1 / -1; }
 
@@ -46,6 +85,9 @@ body {
     background-image: linear-gradient(to right bottom, #ebe1b0, #c25000, #73260a);
     background-clip: text;
     color: transparent; }
+    .cocktail__title--inactive {
+      background-image: none;
+      color: grey; }
   .cocktail__img {
     width: 32rem;
     border-radius: 4px;
@@ -99,6 +141,11 @@ body {
 .heading-1 {
   font-family: "Lemonada", sans-serif;
   font-size: 3.2rem; }
+
+.heading-2 {
+  font-size: 1.8rem;
+  font-weight: 300;
+  letter-spacing: .1rem; }
 
 .ingredient__img {
   width: 100%;

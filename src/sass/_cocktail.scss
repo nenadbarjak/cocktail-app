@@ -14,6 +14,11 @@
         background-image: linear-gradient(to right bottom, $cream, $tiger-lily, $maroon);
         background-clip: text;
         color: transparent;
+
+        &--inactive {
+            background-image: none;
+            color: grey;
+        }
     }
 
     &__img {
