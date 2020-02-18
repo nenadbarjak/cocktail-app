@@ -3,10 +3,16 @@
     padding: 3rem;
 
     display: grid;
-    grid-template-rows: repeat(3, max-content);
+    grid-template-rows: repeat(4, max-content);
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 3rem;
     justify-items: center;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-medium),
+           only screen and (min-width: 1024px) and (hover: none) and (orientation: portrait) {
+        grid-column: 2 / span 10;
+    }
 
     &__title {
         grid-column: 1 / 2;
@@ -25,6 +31,10 @@
         width: 32rem;
         border-radius: 4px;
         background-color: grey;
+
+        @media only screen and (min-width: $bp-XL) {
+            width: 40rem;
+        }
     }
 
     &__instructions {
@@ -39,6 +49,10 @@
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 2rem;
         justify-items: center;
+
+        @media only screen and (max-width: $bp-small) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__clear {
@@ -52,6 +66,7 @@
         cursor: pointer;
         opacity: .9;
         transition: all .3s ease;
+        align-self: center;
 
         &:hover {
             opacity: 1;

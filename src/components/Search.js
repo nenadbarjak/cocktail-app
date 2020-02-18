@@ -73,7 +73,7 @@ const Search = ({ cocktailsList, dispatchCocktailsList, dispatchSelectedCocktail
                     options={ingr}
                     isSearchable
                     isClearable
-                    placeholder="Search for an ingredient"
+                    placeholder="Search ingredients"
                     onChange={getImg}
                 />
             </div>

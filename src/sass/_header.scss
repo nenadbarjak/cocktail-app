@@ -1,10 +1,19 @@
 .header {
     background-image: linear-gradient(to right bottom, $tiger-lily, $maroon, $ebony);
     grid-column: 1 / -1;
+    padding: 1rem 2rem;
 
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    @media only screen and (max-width: $bp-medium) {
+        flex-direction: column;
+
+        & > * {
+            margin-bottom: 1rem;
+        }
+    }
 
     &__heading {
         text-transform: uppercase;
@@ -12,13 +21,13 @@
     }
 
     &__subtitle {
-
+        text-align: center;
     }
 
     &__random {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         text-transform: uppercase;
-        letter-spacing: .15rem;
+        letter-spacing: .1rem;
         cursor: pointer;
         color: $tiger-lily;
         padding: 1rem;

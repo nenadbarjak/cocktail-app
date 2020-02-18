@@ -8,6 +8,14 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 3rem;
 
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
     &__thumb {
         background-image: linear-gradient(to right bottom, $cream, $tiger-lily, $maroon);
         padding: .75rem;

@@ -1,7 +1,7 @@
 .footer {
     background-color: $ebony;
+    padding: 1.3rem;
 
-    grid-row: 3 / 4;
     grid-column: 1 / -1;
 
     display: flex;
@@ -9,11 +9,8 @@
     align-items: center;
 
     &__text {
-        font-size: 1.35rem;
+        font-size: 1.25rem;
         font-family: $font-primary;
         color: $tiger-lily;
-        // background-image: linear-gradient(to right bottom, $cream, $tiger-lily);
-        // background-clip: text;
-        // color: transparent;
     }
 }

@@ -38,6 +38,8 @@ const CocktailsList = ({ cocktailsList, dispatchSelectedCocktail }) => {
                     type: 'SET_SELECTED_COCKTAIL',
                     cocktail
                 })
+
+                window.scrollTo(0, 0)
             })
             .catch((err) => {
                 console.log(err)

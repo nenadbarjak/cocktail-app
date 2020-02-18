@@ -10,9 +10,23 @@
     justify-items: center;
     align-items: center;
 
+    @media only screen and (max-width: $bp-medium),
+           only screen and (min-width: 1024px) and (hover: none) and (orientation: portrait) {
+        grid-column: 2 / span 10;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+
+        grid-template-columns: 60% 1fr;
+    }
+
     &__select {
         width: 75%;
         font-size: 1.6rem;
+
+        @media only screen and (max-width: $bp-small) {
+            width: 100%;
+        }
     }
 
     &__img {

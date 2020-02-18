@@ -9,6 +9,14 @@ $maroon: #73260a;
 $tiger-lily: #c25000;
 $color-black: #000;
 
+// RESPONSIVE BREAKPOINTS
+$bp-XL: 100em; // 1600px
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em;// 1000px
+$bp-medium: 50em; //800px
+$bp-small: 37.5em; // 600px
+
+
 *,
 *::before,
 *::after {
@@ -20,6 +28,15 @@ $color-black: #000;
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+    scroll-behavior: smooth;
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 50%;
+    }
+
+    @media only screen and (max-width: $bp-large) {
+        font-size: 37.5%;
+    }
 }
 
 body {
@@ -27,7 +44,6 @@ body {
     font-weight: 300;
     line-height: 1.6;
 
-    //background-color: #0a0708;
     background-color: $color-black;
     color: $cream;
 }

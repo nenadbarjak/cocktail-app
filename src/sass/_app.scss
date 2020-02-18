@@ -2,7 +2,17 @@
     height: 100vh;
 
     display: grid;
-    grid-template-rows: 6rem 1fr 6rem;
+    grid-template-rows: max-content 1fr max-content;
     grid-template-columns: repeat(12, 1fr);
-    grid-gap: 3rem;    
+    grid-gap: 3rem;  
+    
+    @media only screen and (max-width: $bp-medium),
+           only screen and (min-width: 1024px) and (hover: none) and (orientation: portrait) {
+        height: auto;
+        grid-template-rows: max-content minmax(max-content, 60vh) 1fr 6rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        
+    }
 }
