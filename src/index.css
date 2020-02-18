@@ -50,7 +50,7 @@ body {
       width: 100%;
       transition: all .4s ease; }
     .header__random:hover {
-      background-image: linear-gradient(to right bottom, #c25000, #73260a);
+      background-image: linear-gradient(to right bottom, #ebe1b0, #c25000);
       color: #000;
       border: 1px solid #73260a; }
     .header__random--invisible {
