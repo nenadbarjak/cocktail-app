@@ -69,7 +69,14 @@ body {
 .footer {
   background-color: #0a0708;
   grid-row: 3 / 4;
-  grid-column: 1 / -1; }
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .footer__text {
+    font-size: 1.35rem;
+    font-family: "Lemonada", sans-serif;
+    color: #c25000; }
 
 .cocktail {
   grid-column: 1 / span 6;

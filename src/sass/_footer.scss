@@ -1,8 +1,19 @@
 .footer {
-    //background-color: #1b7b34;
     background-color: $ebony;
-
 
     grid-row: 3 / 4;
     grid-column: 1 / -1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__text {
+        font-size: 1.35rem;
+        font-family: $font-primary;
+        color: $tiger-lily;
+        // background-image: linear-gradient(to right bottom, $cream, $tiger-lily);
+        // background-clip: text;
+        // color: transparent;
+    }
 }

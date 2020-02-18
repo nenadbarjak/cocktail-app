@@ -9,7 +9,7 @@ const Cocktail = ({ cocktail, dispatchSelectedCocktail }) => {
 
     return (  
         <div className="cocktail">
-            <h1 className={headingClass}>{cocktail.name ? cocktail.name : 'Choose an ingredient'}</h1>
+            <h1 className={headingClass}>{cocktail.name ? cocktail.name : 'Cocktail'}</h1>
             <img src={src} className="cocktail__img" alt="cocktail" />
             <p className="cocktail__instructions">{cocktail.instructions}</p>
             <div className="cocktail__ingredients">
