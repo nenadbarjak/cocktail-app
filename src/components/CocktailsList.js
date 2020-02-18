@@ -25,10 +25,9 @@ const CocktailsList = ({ cocktailsList, dispatchSelectedCocktail }) => {
                         ingredients.push(data[key] + ', ' + measures[index]) 
                     }
                 })
-                //ingredients.forEach(ingr => console.log(ingr.split(',')[0]))
 
                 const cocktail = {
-                    id : data.idDrink,
+                    id: data.idDrink,
                     name: data.strDrink,
                     instructions: data.strInstructions,
                     img: data.strDrinkThumb,

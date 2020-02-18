@@ -15,7 +15,9 @@ function App() {
 
   return (   
     <div className="App">
-      <Header />
+      <Header 
+        dispatchSelectedCocktail={dispatchSelectedCocktail}
+      />
       <Cocktail 
         cocktail={selectedCocktail} 
         dispatchSelectedCocktail={dispatchSelectedCocktail}
