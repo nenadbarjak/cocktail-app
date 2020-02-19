@@ -2,7 +2,6 @@ const cocktailsReducer = (state, action) => {
     switch (action.type) {
         case 'SET_COCKTAILS_LIST':
             return [
-                ...state,
                 ...action.cocktails
             ]
 
